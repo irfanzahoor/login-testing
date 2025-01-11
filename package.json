@@ -1,0 +1,23 @@
+{
+  "name": "ele-app",
+  "version": "1.0.0",
+  "main": "./main/main.js",
+  "directories": {
+  "type": "module",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "nextash",
+  "license": "MIT ",
+  "description": "this ss",
+  "devDependencies": {
+    "electron": "^33.3.1"
+  },
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  }
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <h1>Projects</h1>
+    <ul id="project-list"></ul>
+  </div>
+  <script>
+    const { electron } = window;
+
+    electron.on('projects-data', (_, projects) => {
+      const projectList = document.getElementById('project-list');
+      projects.forEach(project => {
+        const listItem = document.createElement('li');
+        listItem.textContent = project.name;
+        projectList.appendChild(listItem);
+      });
+    });
+  </script>
+</body>
+</html>
